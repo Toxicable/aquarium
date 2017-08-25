@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'app';
+  constructor(
+    private afDb: AngularFireDatabase
+  ){
+    this.afDb.object('/external-data').subscribe(a => console.log(a))
+  }
 }
