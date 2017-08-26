@@ -7,7 +7,11 @@ import * as firebase from 'firebase';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styles: []
+  styles: [`
+  .main-content{
+    height: 100%;
+  }
+  `]
 })
 export class AppComponent {
   constructor(
