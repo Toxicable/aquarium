@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import 'theme.scss';
 
 .top-quarter{
     height:25%;
@@ -9,6 +11,7 @@ html, body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .sidenav-container {
     width: 100%;
@@ -66,7 +69,6 @@ a:visited{
 .main-content{
   min-height: 100vh;
   padding: 80px 3rem 1rem;
-  background-color: #30425a;
 }
 .pointer{
   cursor: pointer;

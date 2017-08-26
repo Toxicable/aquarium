@@ -1,10 +1,12 @@
-<md-toolbar style="background-color:#26acdf; color:white;">
+<md-toolbar color="primary">
   <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
     <span fxLayoutAlign="space-between center" fxFlex="13%">
       <button class="hamburger"  md-button  (click)="sidenav.toggle()">
         <md-icon>menu</md-icon>
       </button>
-      <button md-button routerLink="" style="padding:0;"><h2>Aquarium</h2></button>
+      <span style="padding-left:40px;">
+          <button md-button routerLink="" ><h2>Aquarium</h2></button>
+      </span>
     </span>
   <span>
     <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
