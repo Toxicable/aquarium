@@ -60,7 +60,7 @@ export class CompanyService{
         return this.getAll().map(companies => {
             return companies.filter(c => {
                 for(let i = 0; i < keyWords.length; i++){
-                    if(c.Company.includes(keyWords[i])){
+                    if(c.Company.toLowerCase().includes(keyWords[i].toLowerCase())){
                         return true;
                     }
                 }
