@@ -12,13 +12,15 @@ import { ReviewsComponent } from './review/reviews.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReviewsService } from "./review/reviews.service";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppMaterialModule } from "./app-material.module";
+import { AuthService } from "./auth.service";
+import { AngularFireAuthModule } from "angularfire2/auth";
+
 import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'hammerjs';
-import { AppMaterialModule } from "./app-material.module";
 import { AddReviewComponent } from "./review/add-review.component";
-import { AuthService } from "./auth.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { AuthService } from "./auth.service";
     appRouting,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
   providers: [
     ReviewsService,
