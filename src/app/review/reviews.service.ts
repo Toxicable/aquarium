@@ -12,7 +12,6 @@ export class ReviewsService {
         private afDb: AngularFireDatabase
     ) {
         this.reviews$ = this.afDb.list('/reviews');
-        this.reviews$.subscribe(a => console.log(a))
 
     }
 

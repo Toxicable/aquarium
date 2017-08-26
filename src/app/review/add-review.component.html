@@ -1,15 +1,20 @@
 <div [formGroup] = "form">
 
 <h1>Company Review: </h1>
-    <md-input-container class="example-full-width">
-        <input mdInput formControlName="salary" placeholder="salary(number)">
-    </md-input-container>
+    
     <md-input-container class="example-full-width">
         <input mdInput formControlName="companyName" placeholder="Company Name">
     </md-input-container>
+
     <md-input-container class="example-full-width">
         <input mdInput formControlName="location" placeholder="Location">
     </md-input-container>
+
+    <md-select mdInput formControlName="salary" placeholder="salary(number)" name="dropdown">
+        <md-option *ngFor="let values of salaries" [value]="values.value">
+            {{values.viewValue}}
+        </md-option>
+    </md-select>
     
     <table class="example-full-width" cellspacing="0">
         <h2>Holidays and Sick days</h2>

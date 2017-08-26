@@ -1,0 +1,12 @@
+
+.company-item{
+  background: pink;
+  margin: 0.5rem;
+  padding: 0.25rem;
+  height: 6rem;
+  width: 7rem;
+  border-radius: 0.25rem;
+}
+.company-item:hover{
+  transform: scale(1.1)
+}

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { CompanyService } from "../company/company.service";
 import { Observable } from "rxjs/Observable";
+import { CompanyService } from "../company/company.service";
+import { Company } from "../models/company";
 
 /**
  * Home landing page of the site.
@@ -12,14 +14,15 @@ import { Observable } from "rxjs/Observable";
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styles: []
+  styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
   searchControl = new FormControl('');
-  companies$: Observable<any[]>;
+  companyNames$: Observable<string[]>;
 
   constructor(
+    private reviewsService: ReviewsService,
     private companyService: CompanyService
   ) { }
 

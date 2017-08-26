@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.top-quarter{
+    height:25%;
+    width:100%;
+}
+html, body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidenav-container {
+    width: 100%;
+}
+
+md-sidenav.mat-sidenav {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    min-width: 260px;
+    box-shadow: 6px 0 6px rgba(0,0,0,0.10);
+    height: calc(100vh - 64px);
+}
+
+md-sidenav-container.sidenav-container {
+  min-height: 100%;
+  height: auto !important;
+  max-width: 100%;
+  margin: 0;
+  transform: none;
+}
+md-toolbar.mat-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 16px 0 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.30);
+  }
+.nav-item{
+    padding: 1rem;
+    margin: 0.2rem;
+    display: block;
+    text-align: center
+}
+.nav-item:hover{
+    background-color: #dbdbdb;
+    transform: scale(1.1)
+}
+[routerLink]{
+    cursor: pointer;
+}
+a{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:visited{
+  color: black;
+}
+
+.main-content{
+  min-height: 100vh;
+  padding: 80px 3rem 1rem;
+}
+.pointer{
+  cursor: pointer;
+}
+button{
+  transform: scale(1.2)
+}
