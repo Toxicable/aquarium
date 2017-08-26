@@ -38,8 +38,8 @@ export class CompanyComponent implements OnInit {
         return this.companiesService.getAll()
           .map(companies =>{
             const company = companies.find(c => c.Company === companyName);
-            company.Banner = this.sanitiser.bypassSecurityTrustResourceUrl(company.Banner) as any;
-            company.Logo = this.sanitiser.bypassSecurityTrustResourceUrl(company.Logo) as any;
+            company.Banner = this.sanitiser.bypassSecurityTrustResourceUrl(company.Banner) as string;
+            company.Logo = this.sanitiser.bypassSecurityTrustResourceUrl(company.Logo) as string;
             return company;
           })
       })

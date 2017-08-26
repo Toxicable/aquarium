@@ -1,8 +1,8 @@
 <div class="top-quarter">
   <ng-container *ngIf="company$ | async as company; else placeholder">
     <div style="width:100%;">
-
-            <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
+          {{company.Banner.changingThisBreaksApplicationSecurity}}
+          <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
         </div>
     </ng-container>
     <ng-template #placeholder>
