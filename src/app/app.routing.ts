@@ -14,14 +14,14 @@ const appRoutes: Routes = [
     path: 'reviews',
     component: ReviewsComponent
   },{
-    path: 'add-review',
-    component: AddReviewComponent
-  },{
     path: 'profile',
     component: ProfileComponent
   },{
     path: 'company/:companyName',
     component: CompanyComponent
+  },{
+    path: 'company/:companyName/add-review',
+    component: AddReviewComponent
   }
 ];
 

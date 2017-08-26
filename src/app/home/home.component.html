@@ -1,9 +1,18 @@
-<md-input-container class="example-full-width">
-  <input mdInput placeholder="Company Search" [formControl]="searchControl">
-</md-input-container>
 
-<div fxLayout="row wrap">
-    <div *ngFor="let name of companyNames$ | async" [routerLink]="['company', name]" class="company-item pointer">
-        {{name}}
-    </div>
+<div class="top-spacing"></div>
+<div>
+    <span fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+        <div class="card">
+            <md-input-container class="search-box">
+            <input mdInput placeholder="Search Companies" [formControl]="searchControl">
+            </md-input-container>
+        </div>
+    </span>
 </div>
+<div class="search-spacing"></div>
+
+    <div fxLayout="row wrap">
+        <div *ngFor="let name of companies$ | async" [routerLink]="['company', name.Company]" class="card pointer">
+            {{name.Company}}
+        </div>
+    </div>
