@@ -6,6 +6,6 @@
 </div>
 -->
 
-<div *ngFor="let company of companies$ | async">
+<div *ngFor="let company of companies$ | async" [routerLink]="['company', company.Company]">
     {{company.Company}}
 </div>
