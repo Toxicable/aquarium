@@ -23,6 +23,7 @@ import 'hammerjs';
 import { AddReviewComponent } from "./review/add-review.component";
 import { CompanyService } from "./company/company.service";
 import { ProfileComponent } from "./profile/profile.component";
+import { CompaniesComponent } from "./company/companies.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { ProfileComponent } from "./profile/profile.component";
     ReviewsComponent,
     AddReviewComponent,
     ProfileComponent,
+    CompaniesComponent,
   ],
   imports: [
     HttpClientModule,
