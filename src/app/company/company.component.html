@@ -2,22 +2,12 @@
   <ng-container *ngIf="company$ | async as company; else placeholder">
     <div style="width:100%;">
 
-<<<<<<< HEAD
-      <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
-      <img style="max-width:150px;" src="https:{{company.Logo.changingThisBreaksApplicationSecurity}}">
-    </div>
-  </ng-container>
-  <ng-template #placeholder>
-    no image
-  </ng-template>
-=======
             <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
         </div>
     </ng-container>
     <ng-template #placeholder>
             no image
     </ng-template>
->>>>>>> 0e74e74b8787c7164aa5f19939757b7c6da8f0d9
 
   <button md-button routerLink="add-review" style="background-color:green;">Add Review</button>
 </div>
