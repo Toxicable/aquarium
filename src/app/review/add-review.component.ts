@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup } from "@angular/forms";
 import { ReviewsService } from "./reviews.service";
 import { Observable } from "rxjs/Observable";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-reviews',
@@ -13,7 +14,8 @@ export class AddReviewComponent implements OnInit {
 
   constructor(
     private reviewsService: ReviewsService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -33,6 +35,10 @@ export class AddReviewComponent implements OnInit {
         'compStruct': '',
         'review': ''
     })
+  }
+  submit(){
+    this.reviewsService.add(this.form.value);
+    this.router.navigate(['/reviews'])
   }
 
 }
