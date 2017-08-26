@@ -12,7 +12,7 @@
 <div class="search-spacing"></div>
 
     <div fxLayout="row wrap">
-        <div *ngFor="let name of companies$ | async" [routerLink]="['company', name.Company]" class="card pointer">
+        <div *ngFor="let name of companies$ | async" [routerLink]="['company', name.Company]" class="card pointer company-card">
             {{name.Company}}
         </div>
     </div>
