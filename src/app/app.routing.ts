@@ -4,6 +4,7 @@ import { ModuleWithProviders } from "@angular/core";
 import { HomeComponent } from "./home/home.component";
 import { ReviewsComponent } from './review/reviews.component';
 import { AddReviewComponent } from "./review/add-review.component";
+import { ProfileComponent } from "./profile/profile.component";
 const appRoutes: Routes = [
   {
     path: '',
@@ -14,6 +15,9 @@ const appRoutes: Routes = [
   },{
     path: 'add-review',
     component: AddReviewComponent
+  },{
+    path: 'profile',
+    component: ProfileComponent
   }
 ];
 
