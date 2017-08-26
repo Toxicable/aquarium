@@ -9,6 +9,12 @@ import { environment } from "../environments/environment";
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { ReviewComponent } from './review/review.component';
 import { ReviewsComponent } from './review/reviews.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import 'rxjs/add/observable/of'
+import { ReviewsService } from "./review/reviews.service";
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/map';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +25,13 @@ import { ReviewsComponent } from './review/reviews.component';
   imports: [
     BrowserModule,
     appRouting,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    ReviewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

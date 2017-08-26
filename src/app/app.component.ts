@@ -11,6 +11,6 @@ export class AppComponent {
   constructor(
     private afDb: AngularFireDatabase
   ){
-    this.afDb.object('/external-data').subscribe(a => console.log(a))
+    
   }
 }
