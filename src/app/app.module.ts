@@ -15,7 +15,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppMaterialModule } from "./app-material.module";
 import { AuthService } from "./auth.service";
 import { AngularFireAuthModule } from "angularfire2/auth";
-
+import { HttpClientModule } from '@angular/common/http';
 import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
@@ -30,6 +30,7 @@ import { AddReviewComponent } from "./review/add-review.component";
     AddReviewComponent
   ],
   imports: [
+    HttpClientModule,
     AppMaterialModule,
     BrowserAnimationsModule,
     BrowserModule,
