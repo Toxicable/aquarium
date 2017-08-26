@@ -23,11 +23,17 @@ module.exports = function (config) {
         environment: 'dev'
       },
       reporters: ['progress', 'kjhtml'],
+      customLaunchers: {
+        Chrome_travis_ci: {
+          base: 'Chrome',
+          flags: ['--no-sandbox']
+        }
+      },
       port: 9876,
       colors: true,
       logLevel: config.LOG_INFO,
       autoWatch: true,
-      browsers: ['Chrome'],
+      browsers: [process.env.TRAVIS ? 'Chrome_travis_ci' : 'Chrome'],
       singleRun: false
     });
   };
