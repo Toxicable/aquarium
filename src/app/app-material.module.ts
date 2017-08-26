@@ -5,8 +5,10 @@ import {MdToolbarModule} from '@angular/material';
 import {MdSliderModule} from '@angular/material';
 import {MdButtonModule} from '@angular/material';
 import {MdSelectModule} from '@angular/material';
+import {MdTabsModule} from '@angular/material';
 
 const IMPORTS = [
+  MdTabsModule,
   MdInputModule,
   MdSidenavModule,
   MdToolbarModule,
