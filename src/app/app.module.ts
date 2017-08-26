@@ -10,11 +10,13 @@ import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/dat
 import { ReviewComponent } from './review/review.component';
 import { ReviewsComponent } from './review/reviews.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import 'rxjs/add/observable/of'
 import { ReviewsService } from "./review/reviews.service";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
-
+import 'hammerjs';
+import { AppMaterialModule } from "./app-material.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import 'rxjs/add/operator/map';
     ReviewsComponent
   ],
   imports: [
+    AppMaterialModule,
+    BrowserAnimationsModule,
     BrowserModule,
     appRouting,
     ReactiveFormsModule,
