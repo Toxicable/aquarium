@@ -1,37 +1,32 @@
 <md-toolbar color="primary">
-    <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
-                <span>
-                <button class="hamburger"  md-button  (click)="sidenav.toggle()">
-                    <md-icon svgIcon="menu"></md-icon>
-                </button>
-            <span>Aquarium</span>
-    <span>Welcome: </span>
+  <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
+    <span fxLayoutAlign="space-between center" fxFlex="13%">
+      <button class="hamburger"  md-button  (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+      </button>
+      <button md-button routerLink=""><h2>Aquarium</h2></button>
     </span>
+  <span>
+    <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
+        Welcome: {{user.email}}
+    <button md-button (click)="logout()"><h4>Sign Out</h4></button>
+  </span>
+  <ng-template #notLoggedIn>
+    <button md-button (click)="login()"><h4>Login!</h4></button>
+  </ng-template>
+  </span>
 
-    <span>
-        <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
-            {{user.email}}
-        <span (click)="logout()">Sign Out</span></span>
-    <ng-template #notLoggedIn>
-        <span (click)="login()"> Login</span>
-    </ng-template>
-    </span>
-
-    </span>
+  </span>
 </md-toolbar>
 
 <md-sidenav-container class="sidenav-container">
-    <md-sidenav #sidenav mode="side" opened="true">
-        <a routerLink="reviews">reviews</a> <br>
-        <a routerLink="">home</a> <br>
-        <a routerLink="add-review">Add Reviews</a> <br>
-        <a routerLink="profile">Profile</a> <br>
-    </md-sidenav>
+  <md-sidenav #sidenav mode="side" opened="true">
+    <a class="nav-item" routerLink="">Home</a>
+    <a class="nav-item" routerLink="add-review">Add Review</a>
+  </md-sidenav>
 
-
-
-    <div class="main-content">
-        <router-outlet></router-outlet>
-    </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
 
 </md-sidenav-container>

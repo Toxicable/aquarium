@@ -1,11 +1,9 @@
-<input [formControl]="searchControl" />
+<md-input-container class="example-full-width">
+  <input mdInput placeholder="Company Search" [formControl]="searchControl">
+</md-input-container>
 
-<!--
-<div *ngFor="let review of reviews$ | async">
-    {{review | json}}
-</div>
--->
-
-<div *ngFor="let company of companies$ | async" [routerLink]="['company', company.Company]">
-    {{company.Company}}
+<div fxLayout="row wrap">
+    <div *ngFor="let name of companyNames$ | async" [routerLink]="['company', name]" class="company-item pointer">
+        {{name}}
+    </div>
 </div>

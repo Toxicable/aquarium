@@ -3,6 +3,7 @@ import { FormControl, FormBuilder, FormGroup } from "@angular/forms";
 import { ReviewsService } from "./reviews.service";
 import { Observable } from "rxjs/Observable";
 import { Router } from "@angular/router";
+import { MdSnackBar } from "@angular/material";
 
 @Component({
   selector: 'app-reviews',
@@ -26,6 +27,7 @@ export class AddReviewComponent implements OnInit {
     private reviewsService: ReviewsService,
     private formBuilder: FormBuilder,
     private router: Router,
+    private snackBar: MdSnackBar,
   ) { }
 
   ngOnInit() {
@@ -48,7 +50,10 @@ export class AddReviewComponent implements OnInit {
   }
   submit(){
     this.reviewsService.add(this.form.value);
-    this.router.navigate(['/reviews'])
+    this.router.navigate(['/reviews']);
+    this.snackBar.open('Successfully Posted Review!','Close', {
+      duration: 1500
+    })
   }
 
 }

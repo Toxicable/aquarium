@@ -14,13 +14,12 @@ import { Company } from "../models/company";
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styles: []
+  styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
   searchControl = new FormControl('');
-  reviews$: Observable<any[]>;
-  companies$: Observable<Company[]>;
+  companyNames$: Observable<string[]>;
 
   constructor(
     private reviewsService: ReviewsService,
@@ -29,9 +28,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.companies$ = this.companyService.getAll()
-    this.reviews$ = this.searchControl.valueChanges
-      .mergeMap( value => this.reviewsService.searchByTitle(value))
+    this.companyNames$ = this.companyService.getCompanyNames();
   }
 
 }

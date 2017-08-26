@@ -16,15 +16,17 @@ import { AppMaterialModule } from "./app-material.module";
 import { AuthService } from "./auth.service";
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { HttpClientModule } from '@angular/common/http';
+import { AddReviewComponent } from "./review/add-review.component";
+import { CompanyService } from "./company/company.service";
+import { ProfileComponent } from "./profile/profile.component";
+import { CompanyComponent } from "./company/company.component";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
 import 'hammerjs';
-import { AddReviewComponent } from "./review/add-review.component";
-import { CompanyService } from "./company/company.service";
-import { ProfileComponent } from "./profile/profile.component";
-import { CompanyComponent } from "./company/company.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,12 +43,13 @@ import { CompanyComponent } from "./company/company.component";
     BrowserAnimationsModule,
     BrowserModule,
     appRouting,
+    FlexLayoutModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [ 
+  providers: [
     ReviewsService,
     AuthService,
     CompanyService,

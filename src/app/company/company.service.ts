@@ -17,6 +17,9 @@ export class CompanyService{
     getAll(){
         return this.companies$;
     }
+    getCompanyNames(){
+        return this.companies$.map(companies => companies.map(c => c.Company));
+    }
 
     searchByCompanyName(term: string, take: number){
         return this.companies$.map(company => {
