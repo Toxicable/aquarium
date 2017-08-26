@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/share';
 import 'hammerjs';
 import { AddReviewComponent } from "./review/add-review.component";
 import { CompanyService } from "./company/company.service";
