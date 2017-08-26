@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms";
-import { ReviewsService } from "../review/reviews.service";
+import { CompanyService } from "../company/company.service";
 import { Observable } from "rxjs/Observable";
 
 /**
@@ -17,15 +17,15 @@ import { Observable } from "rxjs/Observable";
 export class HomeComponent implements OnInit {
 
   searchControl = new FormControl('');
-  reviews$: Observable<any[]>;
+  companies$: Observable<any[]>;
 
   constructor(
-    private reviewsService: ReviewsService
+    private companyService: CompanyService
   ) { }
 
   ngOnInit() {
-    this.reviews$ = this.searchControl.valueChanges
-      .mergeMap( value => this.reviewsService.searchByTitle(value))
+    this.companies$ = this.searchControl.valueChanges
+      .mergeMap( value => this.companyService.searchByCompanyName(value))
   }
 
 }

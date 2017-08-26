@@ -1,5 +1,5 @@
 <input [formControl]="searchControl" />
 
-<div *ngFor="let review of reviews$ | async">
+<div *ngFor="let review of companies$ | async">
 {{review | json}}
 </div>
