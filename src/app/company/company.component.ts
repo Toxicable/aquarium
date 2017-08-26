@@ -18,7 +18,7 @@ import { AngularFireDatabase } from "angularfire2/database";
 @Component({
   selector: 'app-home',
   templateUrl: 'company.component.html',
-  styles: [],
+  styleUrls: ['company.component.scss']
 })
 export class CompanyComponent implements OnInit {
     constructor(
