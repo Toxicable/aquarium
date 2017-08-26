@@ -14,10 +14,13 @@
     <table class="example-full-width" cellspacing="0">
         <h2>Holidays and Sick days</h2>
         <tr>
-            <td>
+            <td>   
+                <md-slider formControlName="allowanceRating" min="0" max="5" step="1" ></md-slider>
+<!--
                 <md-input-container class="example-full-width">
-                    <input mdInput formControlName="allowanceRating" placeholder="rating (number)">
+                    <input mdInput  placeholder="rating (number)">
                 </md-input-container>
+-->
             </td>
             <td>
                 <md-input-container class="example-full-width">
@@ -28,9 +31,8 @@
         <h2>Career Development Opportunities</h2>
         <tr>
             <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput formControlName="careerDevRating" placeholder="rating (number)">
-                </md-input-container>
+                <md-slider formControlName="careerDevRating" min="0" max="5" step="1" ></md-slider>
+                
             </td>
             <td>
                 <md-input-container class="example-full-width">
@@ -41,9 +43,8 @@
         <h2>Dress code and requirements</h2>
         <tr>
             <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput formControlName="dressCodeRating" placeholder="rating (number)">
-                </md-input-container>
+                <md-slider formControlName="dressCodeRating" min="0" max="5" step="1" ></md-slider>
+                
             </td>
             <td>
                 <md-input-container class="example-full-width">
@@ -54,9 +55,7 @@
         <h2>Company Diversity</h2>
         <tr>
             <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput formControlName="diversityRating" placeholder="rating (number)">
-                </md-input-container>
+                <md-slider formControlName="diversityRating" min="0" max="5" step="1" ></md-slider>
             </td>
             <td>
                 <md-input-container class="example-full-width">
@@ -67,9 +66,7 @@
         <h2>Company Structure</h2>
         <tr>
             <td>
-                <md-input-container class="example-full-width">
-                    <input mdInput formControlName="compStructRating" placeholder="rating (number)">
-                </md-input-container>
+                <md-slider formControlName="compStructRating" min="0" max="5" step="1" ></md-slider>
             </td>
             <td>
                 <md-input-container class="example-full-width">
