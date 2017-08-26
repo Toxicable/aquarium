@@ -9,14 +9,7 @@ export class ReviewsService {
     reviews$: Observable<Review[]>;
 
     constructor(
-<<<<<<< HEAD
-        private afDb: AngularFireDatabase,
-    ) { 
-         this.reviews$ = Observable.of([
-            {location: 'I am a title'}
-         ])
-=======
-
+        private afDb: AngularFireDatabase
     ) {
         this.reviews$ = Observable.of([
             {   $key: '' ,
@@ -100,7 +93,6 @@ export class ReviewsService {
                 CompStructRating: 1
         } ,
         ])
->>>>>>> d4c7d5d641301a69586bcf36f8dccc8cd62db0fc
 
     }
 
@@ -108,10 +100,8 @@ export class ReviewsService {
         return this.reviews$.map(r => r.filter(item => item.location.includes(term)));
     }
 
-<<<<<<< HEAD
     add(review: Review){
         this.afDb.list('/reviews').push(review);
     }
-=======
->>>>>>> d4c7d5d641301a69586bcf36f8dccc8cd62db0fc
+
 }
