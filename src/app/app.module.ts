@@ -22,13 +22,15 @@ import 'rxjs/add/operator/map';
 import 'hammerjs';
 import { AddReviewComponent } from "./review/add-review.component";
 import { CompanyService } from "./company/company.service";
+import { CompaniesComponent } from "./company/companies.component";
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ReviewComponent,
     ReviewsComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    CompaniesComponent
   ],
   imports: [
     HttpClientModule,
