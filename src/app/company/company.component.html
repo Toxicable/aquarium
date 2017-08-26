@@ -30,7 +30,7 @@
   </md-tab>
   <md-tab label="Job Listings">
     <div *ngFor="let listing of (company$ | async)?.Classifieds">
-      <a href="https://trademe.co.nz/{{listing.ListingId}}">
+      <a target="_blank" href="https://trademe.co.nz/{{listing.ListingId}}">
         <div class="title">{{listing.Title}}</div>
       </a>
       <div class="separator"></div>
