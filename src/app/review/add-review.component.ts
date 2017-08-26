@@ -18,7 +18,20 @@ export class AddReviewComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-        'companyName': ''
+        'companyName': '',
+        'salary': '',
+        'location': '',
+        'allowanceRating': '',
+        'allowance': '',
+        'careerDevRating': '',
+        'careerDev': '',
+        'dressCodeRating': '',
+        'dressCode': '',
+        'diversityRating': '',
+        'diversity': '',
+        'compStructRating': '',
+        'compStruct': '',
+        'review': ''
     })
   }
 

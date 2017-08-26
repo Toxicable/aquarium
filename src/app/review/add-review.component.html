@@ -1,30 +1,87 @@
 <div [formGroup] = "form">
 
-
+<h1>Company Review: </h1>
     <md-input-container class="example-full-width">
-        <input mdInput formControlName="companyName" placeholder="Company Name">
+        <input mdInput formControlName="salary" placeholder="salary(number)">
     </md-input-container>
     <md-input-container class="example-full-width">
         <input mdInput formControlName="companyName" placeholder="Company Name">
     </md-input-container>
-    <h2>Field Title</h2>
+    <md-input-container class="example-full-width">
+        <input mdInput formControlName="location" placeholder="Location">
+    </md-input-container>
+    
     <table class="example-full-width" cellspacing="0">
+        <h2>Holidays and Sick days</h2>
         <tr>
             <td>
                 <md-input-container class="example-full-width">
-                    <input mdInput placeholder="rating">
+                    <input mdInput formControlName="allowanceRating" placeholder="rating (number)">
                 </md-input-container>
             </td>
             <td>
                 <md-input-container class="example-full-width">
-                    <input mdInput placeholder="short description">
+                    <input mdInput formControlName="allowance" placeholder="short description">
                 </md-input-container>
             </td>
         </tr>
+        <h2>Career Development Opportunities</h2>
         <tr>
             <td>
                 <md-input-container class="example-full-width">
-                    <input mdInput placeholder="long description">
+                    <input mdInput formControlName="careerDevRating" placeholder="rating (number)">
+                </md-input-container>
+            </td>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="careerDev" placeholder="short description">
+                </md-input-container>
+            </td>
+        </tr>
+        <h2>Dress code and requirements</h2>
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="dressCodeRating" placeholder="rating (number)">
+                </md-input-container>
+            </td>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="dressCode" placeholder="short description">
+                </md-input-container>
+            </td>
+        </tr>
+        <h2>Company Diversity</h2>
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="diversityRating" placeholder="rating (number)">
+                </md-input-container>
+            </td>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="diversity" placeholder="short description">
+                </md-input-container>
+            </td>
+        </tr>
+        <h2>Company Structure</h2>
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="compStructRating" placeholder="rating (number)">
+                </md-input-container>
+            </td>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="compStruct" placeholder="short description">
+                </md-input-container>
+            </td>
+        </tr>
+        <h2>Review</h2>
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput formControlName="review" placeholder="long description">
                 </md-input-container>
             </td>
         </tr>
