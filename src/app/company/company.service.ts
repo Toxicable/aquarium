@@ -28,6 +28,11 @@ export class CompanyService{
     }
 
     searchCompanies(search: string){
+
+        if(search == ''){
+            return Observable.of([]);
+        }
+
         let keyWords: string[] = search.split(" ");
         let keyWord: string = "";
 
@@ -50,6 +55,8 @@ export class CompanyService{
         })
         */
 
+
+
         return this.getAll().map(companies => {
             return companies.filter(c => {
                 for(let i = 0; i < keyWords.length; i++){
@@ -58,7 +65,7 @@ export class CompanyService{
                     }
                 }
                 return false;
-            });
+            }).slice(0,10);
         });
     }
 }
