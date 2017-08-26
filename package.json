@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --prod --build-optimizer",
     "deploy": "npm run build && firebase deploy",
-    "test": "ng test"
+    "test": "ng test",
+    "test:ci": "ng test --watch false"
   },
   "private": true,
   "dependencies": {
