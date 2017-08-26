@@ -15,7 +15,7 @@
         <div *ngFor="let name of companies$ | async" [routerLink]="['company', name.Company]" class="card pointer company-card">
             <div class="image-cropper">
 
-                    <img *ngIf = "name.Logo" [src]="name.Logo">
+                    <img *ngIf = "name.Logo"S [src]="name.Logo">
              </div>
             {{name.Company}}
         </div>
