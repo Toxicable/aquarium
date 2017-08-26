@@ -1,4 +1,26 @@
-<md-sidenav-container class="example-sidenav-fab-container" fullscreen>
+<md-toolbar color="primary">
+    <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
+                <span>
+                <button class="hamburger"  md-button  (click)="sidenav.toggle()">
+                    <md-icon svgIcon="menu"></md-icon>
+                </button>
+            <span>Aquarium</span>
+    <span>Welcome: </span>
+    </span>
+
+    <span>
+        <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
+            {{user.email}}
+        <span (click)="logout()">Sign Out</span></span>
+    <ng-template #notLoggedIn>
+        <span (click)="login()"> Login</span>
+    </ng-template>
+    </span>
+
+    </span>
+</md-toolbar>
+
+<md-sidenav-container class="sidenav-container">
     <md-sidenav #sidenav mode="side" opened="true">
         <a routerLink="reviews">reviews</a> <br>
         <a routerLink="">home</a> <br>
@@ -7,27 +29,7 @@
         <a routerLink="companies">Companies</a> <br>
     </md-sidenav>
 
-    <md-toolbar color="primary">
-        <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
-                <span>
-                <button class="hamburger"  md-button  (click)="sidenav.toggle()">
-                    <md-icon svgIcon="menu"></md-icon>
-                </button>
-            <span>Aquarium</span>
-        <span>Welcome: </span>
-        </span>
 
-        <span>
-            <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
-                {{user.email}}
-            <span (click)="logout()">Sign Out</span></span>
-        <ng-template #notLoggedIn> 
-            <span (click)="login()"> Login</span>
-        </ng-template>
-        </span>
-
-        </span>
-    </md-toolbar>
 
     <div class="main-content">
         <router-outlet></router-outlet>
