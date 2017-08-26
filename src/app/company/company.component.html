@@ -15,16 +15,24 @@
 
 <md-tab-group>
   <md-tab label="Reviews">
-    <div *ngFor="let review of reviews$ | async">
-    
-      {{review | json}}
+    <div *ngFor="let review of reviews$ | async" class="review">
+      <div class="review-location">Location : {{review.location}}</div>
+      <div class="review-stars">Allowance Rating : {{review.allowanceRating}}</div>
+      <div class="review-stars">Career Development Rating : {{review.careerDevRating}}</div>
+      <div class="review-stars">Company Structure Rating : {{review.compStructRating}}</div>
+      <div class="review-stars">Diversity Rating : {{review.diversityRating}}</div>
+      <div class="review-stars">Dresscode Rating : {{review.dressCodeRating}}</div>
+      <div class="review-salary">Salary : {{review.salary}}</div>
+      <div class="review-content">Review : {{review.review}}</div>
     </div>
 
     <div class="separator"></div>
   </md-tab>
   <md-tab label="Job Listings">
     <div *ngFor="let listing of (company$ | async)?.Classifieds">
-      <div class="title">Title : {{listing.Title}}</div>
+      <a href="https://trademe.co.nz/{{listing.ListingId}}">
+        <div class="title">{{listing.Title}}</div>
+      </a>
       <div class="separator"></div>
     </div>
   </md-tab>
