@@ -16,9 +16,9 @@ export class CompanyService{
         return this.http.get<Company[]>('assets/companies.json');
     }
 
-    searchByCompanyName(term: string){
+    searchByCompanyName(term: string, take: number){
         return this.getAll().map(companies => {
-            return companies.filter(c => c.Company.includes(term))
+            return companies.filter(c => c.Company.includes(term)).slice(0, take)
         });
     }
 }

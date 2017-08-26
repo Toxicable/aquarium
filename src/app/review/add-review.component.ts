@@ -12,6 +12,16 @@ import { Router } from "@angular/router";
 export class AddReviewComponent implements OnInit {
     form: FormGroup
 
+    salaries = [
+                {value: '0', viewValue: '< $40k'},
+                {value: '1', viewValue: '$40k - $60k'},
+                {value: '2', viewValue: '$60k - $80k'},
+                {value: '3', viewValue: '$80k - $100k'},
+                {value: '4', viewValue: '$100k - $125k'},
+                {value: '5', viewValue: '$125k - $150k'},
+                {value: '6', viewValue: '> $150k'},
+                ]
+
   constructor(
     private reviewsService: ReviewsService,
     private formBuilder: FormBuilder,

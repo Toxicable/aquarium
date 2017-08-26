@@ -3,6 +3,7 @@
         <a routerLink="reviews">reviews</a> <br>
         <a routerLink="">home</a> <br>
         <a routerLink="add-review">Add Reviews</a> <br>
+        <a routerLink="profile">Profile</a> <br>
         <a routerLink="companies">Companies</a> <br>
     </md-sidenav>
 
@@ -20,7 +21,7 @@
             <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
                 {{user.email}}
             <span (click)="logout()">Sign Out</span></span>
-        <ng-template #notLoggedIn>
+        <ng-template #notLoggedIn> 
             <span (click)="login()"> Login</span>
         </ng-template>
         </span>

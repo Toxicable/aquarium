@@ -22,6 +22,7 @@ import 'rxjs/add/operator/map';
 import 'hammerjs';
 import { AddReviewComponent } from "./review/add-review.component";
 import { CompanyService } from "./company/company.service";
+import { ProfileComponent } from "./profile/profile.component";
 import { CompaniesComponent } from "./company/companies.component";
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CompaniesComponent } from "./company/companies.component";
     ReviewComponent,
     ReviewsComponent,
     AddReviewComponent,
-    CompaniesComponent
+    ProfileComponent,
+    CompaniesComponent,
   ],
   imports: [
     HttpClientModule,
@@ -43,7 +45,7 @@ import { CompaniesComponent } from "./company/companies.component";
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [
+  providers: [ 
     ReviewsService,
     AuthService,
     CompanyService,
