@@ -13,12 +13,12 @@ export class CompanyService{
     }
 
     getAll(){
-        return this.http.get<Company[]>('assets/companies.json');
+        return this.http.get<Company[]>('assets/company.json');
     }
 
     searchByCompanyName(term: string, take: number){
-        return this.getAll().map(companies => {
-            return companies.filter(c => c.Company.includes(term)).slice(0, take)
+        return this.getAll().map(company => {
+            return company.filter(c => c.Company.includes(term)).slice(0, take)
         });
     }
 }

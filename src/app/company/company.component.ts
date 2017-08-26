@@ -11,10 +11,13 @@ import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'companies.component.html',
+  templateUrl: 'company.component.html',
   styles: []
 })
-export class CompaniesComponent implements OnInit {
+export class CompanyComponent implements OnInit {
+    constructor(
+      
+    ) {}
     ngOnInit(){}
 
 
