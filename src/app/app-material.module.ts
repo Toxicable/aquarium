@@ -8,6 +8,7 @@ import {MdSelectModule} from '@angular/material';
 import {MdTabsModule} from '@angular/material';
 import {MdSnackBarModule} from '@angular/material';
 import {MdIconModule} from '@angular/material';
+import {MdGridListModule} from '@angular/material';
 
 const IMPORTS = [
   MdTabsModule,
@@ -19,6 +20,7 @@ const IMPORTS = [
   MdSelectModule,
   MdSnackBarModule,
   MdIconModule,
+  MdGridListModule,
 ]
 
 @NgModule({
