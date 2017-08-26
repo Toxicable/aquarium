@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
-    "deploy": "ng build --prod --build-optimizer && firebase deploy",
+    "build": "ng build --prod --build-optimizer",
+    "deploy": "npm run build && firebase deploy",
     "test": "ng test"
   },
   "private": true,
