@@ -1,11 +1,13 @@
 <div class="top-quarter">
-    
+    <ng-container *ngIf="company$ | async as company">
+        {{company | json}}
+    </ng-container>
 </div>
 
 
 <md-tab-group>
     <md-tab label="Reviews">
-
+        
 
 
 
