@@ -1,13 +1,13 @@
 <div class="top-quarter">
     <ng-container *ngIf="company$ | async as company; else placeholder">
         <div style="width:100%;">
-            
+
             <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
             <img style="max-width:150px;" src="https:{{company.Logo.changingThisBreaksApplicationSecurity}}">
         </div>
     </ng-container>
     <ng-template #placeholder>
-            <img style="max-width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
+            no image
     </ng-template>
 
   <button md-button routerLink="add-review">Add Review</button>
@@ -20,13 +20,5 @@
     </md-tab>
     <md-tab label="Job Listings">
 
-
-
-
-
-
-
     </md-tab>
 </md-tab-group>
-
-company
