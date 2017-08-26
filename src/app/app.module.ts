@@ -20,13 +20,14 @@ import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'hammerjs';
-
+import { AddReviewComponent } from "./review/add-review.component";
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ReviewComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    AddReviewComponent
   ],
   imports: [
     AppMaterialModule,

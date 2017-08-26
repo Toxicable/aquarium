@@ -28,4 +28,5 @@ export interface Review{
     CompStruct: string;
     CompStructShort: string;
     CompStructRating: number;
+    generalReview: string;
 }
