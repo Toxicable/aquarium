@@ -13,19 +13,14 @@ export interface Review{
     6   -   > $150k
     */
     
-    allowances: string;
     allowancesShort: string;
     allowancesRating: number;
-    careerDev: string;
     careerDevShort: string;
     careerDevRating: number;
-    dressCode: string;
     dressCodeShort: string;
     dressCodeRating: number;
-    diversity: string;
     diversityShort: string;
     diversityRating: number;
-    CompStruct: string;
     CompStructShort: string;
     CompStructRating: number;
     generalReview: string;
