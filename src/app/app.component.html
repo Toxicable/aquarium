@@ -1,17 +1,19 @@
 <md-toolbar color="primary">
     <span fxLayout="row" fxFlex="100%" fxLayoutAlign="space-between center">
-          <span>
-            <button class="hamburger"  md-button  (click)="sidenav.toggle()">
-              <md-icon svgIcon="menu"></md-icon>
-            </button>
-        <span>Aquarium</span>
+        <span>
+        <button class="hamburger"  md-button  (click)="sidenav.toggle()">
+            <md-icon svgIcon="menu"></md-icon>
+        </button>
+    <span>Aquarium</span>
     <span>Welcome: </span>
     </span>
 
     <span>
-            <span *ngIf="afAuth.authState | async as user; else notLoggedIn">{{user.email}}<span (click)="auth.auth.signOut()">Sign Out</span></span>
+    <span *ngIf="afAuth.authState | async as user; else notLoggedIn">
+        {{user.email}}
+    <span (click)="logout()">Sign Out</span></span>
     <ng-template #notLoggedIn>
-        <span (click)="1 ==1 "> Login</span>
+        <span (click)="login()"> Login</span>
     </ng-template>
     </span>
 
