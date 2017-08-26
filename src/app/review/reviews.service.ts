@@ -95,7 +95,28 @@ export class ReviewsService {
                 CompStructShort: 'high level of structure' ,
                 CompStructRating: 1,
                 generalReview: ''
-        } ,
+            } ,
+            {   $key: '813274318sad' ,
+                companyName: 'Nor West Contracting Ltd' ,
+                location: 'wellington' , 
+                salary: 2 ,
+                allowances: '' , 
+                allowancesShort: 'very few extras given' ,
+                allowancesRating: 1 ,
+                careerDev: '' ,
+                careerDevShort: 'no possability to grow' ,
+                careerDevRating: 1 ,
+                dressCode: '' ,
+                dressCodeShort: 'have to wear a uniform' ,
+                dressCodeRating: 1 ,
+                diversity: '' ,
+                diversityShort: 'very high level of diversity' ,
+                diversityRating: 4 ,
+                CompStruct: '' ,
+                CompStructShort: 'high level of structure' ,
+                CompStructRating: 1,
+                generalReview: ''
+            } ,
         ])
 
     }
