@@ -1,5 +1,6 @@
 export interface Review{
     $key: string;
+    companyName: string;
     location: string;
     salary: number; // will point to a salary range which we can define in the UI
     /* maybe 
