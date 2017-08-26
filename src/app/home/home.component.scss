@@ -6,6 +6,23 @@
   margin-bottom: 0px !important; 
 }
 
+.image-cropper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  //height: 100%;
+  //width: auto;
+}
+
 .company-item:hover{
   transform: scale(1.1)
 }
