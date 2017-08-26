@@ -15,16 +15,11 @@ import { Observable } from "rxjs/Observable";
 })
 export class ReviewsComponent implements OnInit {
 
-  searchControl = new FormControl('');
-  reviews$: Observable<any[]>;
-
   constructor(
     private reviewsService: ReviewsService
   ) { }
 
   ngOnInit() {
-    this.reviews$ = this.searchControl.valueChanges
-      .mergeMap( value => this.reviewsService.searchByTitle(value))
   }
 
 }
