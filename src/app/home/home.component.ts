@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { CompanyService } from "../company/company.service";
 import { Observable } from "rxjs/Observable";
-import { CompanyService } from "../company/company.service";
 import { Company } from "../models/company";
 
 /**
@@ -19,10 +18,9 @@ import { Company } from "../models/company";
 export class HomeComponent implements OnInit {
 
   searchControl = new FormControl('');
-  companyNames$: Observable<string[]>;
+  companies$: Observable<Company[]>;
 
   constructor(
-    private reviewsService: ReviewsService,
     private companyService: CompanyService
   ) { }
 
