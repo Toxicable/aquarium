@@ -15,7 +15,12 @@ import { Observable } from "rxjs/Observable";
   styles: []
 })
 export class CompaniesComponent implements OnInit {
-    ngOnInit(){}
+    constructor(
+      
+    ) {}
+    ngOnInit(){
+
+    }
 
 
 }
