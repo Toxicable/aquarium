@@ -7,7 +7,10 @@ export class CompanyService{
     constructor(
         private http: HttpClient
     ){
-        this.http.get('assets/companies.json')
+        
     }
 
+    getAll(){
+        return this.http.get('assets/companies.json');
+    }
 }

@@ -21,6 +21,7 @@ import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'hammerjs';
 import { AddReviewComponent } from "./review/add-review.component";
+import { CompanyService } from "./company/company.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { AddReviewComponent } from "./review/add-review.component";
   providers: [
     ReviewsService,
     AuthService,
+    CompanyService,
   ],
   bootstrap: [AppComponent]
 })
