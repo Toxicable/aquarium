@@ -1,5 +1,12 @@
 <input [formControl]="searchControl" />
 
-<div *ngFor="let review of companies$ | async">
-{{review | json}}
-</div>
+<table style="width:100%">
+   <tr>
+      <th>Company Name</th>
+      <th>Data</th>
+   </tr>
+   <tr *ngFor="let review of companies$ | async">
+    <td>{{review.Company}}</td>
+    <td></td>
+  </tr>
+</table>

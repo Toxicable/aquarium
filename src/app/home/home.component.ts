@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.companies$ = this.searchControl.valueChanges
-      .mergeMap( value => this.companyService.searchByCompanyName(value))
+      .mergeMap( value => this.companyService.searchCompanies(value))
   }
 
 }
