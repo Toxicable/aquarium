@@ -13,7 +13,7 @@ export class CompanyService{
     }
 
     getAll(){
-        return this.http.get<Company[]>('assets/company.json');
+        return this.http.get<Company[]>('assets/companies.json');
     }
 
     searchByCompanyName(term: string, take: number){

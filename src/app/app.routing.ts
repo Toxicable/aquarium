@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     path: 'profile',
     component: ProfileComponent
   },{
-    path: 'company',
+    path: 'company/:companyName',
     component: CompanyComponent
   }
 ];
