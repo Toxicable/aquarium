@@ -15,13 +15,17 @@
 
 <md-tab-group>
   <md-tab label="Reviews">
-    <div *ngFor="let listing of reviews$ | async">
-      {{listing | json}}
+    <div *ngFor="let review of reviews$ | async">
+    
+      {{review | json}}
     </div>
+
+    <div class="separator"></div>
   </md-tab>
   <md-tab label="Job Listings">
     <div *ngFor="let listing of (company$ | async)?.Classifieds">
-      {{listing | json}}
+      <div class="title">Title : {{listing.Title}}</div>
+      <div class="separator"></div>
     </div>
   </md-tab>
 </md-tab-group>
