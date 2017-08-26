@@ -1,0 +1,34 @@
+<div [formGroup] = "form">
+
+
+    <md-input-container class="example-full-width">
+        <input mdInput formControlName="companyName" placeholder="Company Name">
+    </md-input-container>
+    <md-input-container class="example-full-width">
+        <input mdInput formControlName="companyName" placeholder="Company Name">
+    </md-input-container>
+    <h2>Field Title</h2>
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="rating">
+                </md-input-container>
+            </td>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="short description">
+                </md-input-container>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="long description">
+                </md-input-container>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    {{form.value | json}}
+</div>
