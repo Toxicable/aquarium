@@ -11,8 +11,7 @@ export interface Review{
     5   -   $125k - $150k
     6   -   > $150k
     */
-
-    // All rating numbers are from 1 to 10s
+    
     allowances: string;
     allowancesShort: string;
     allowancesRating: number;
