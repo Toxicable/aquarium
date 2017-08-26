@@ -1,24 +1,28 @@
 <div class="top-quarter">
-    <ng-container *ngIf="company$ | async as company; else placeholder">
-        <div style="width:100%;">
+  <ng-container *ngIf="company$ | async as company; else placeholder">
+    <div style="width:100%;">
 
-            <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
-            <img style="max-width:150px;" src="https:{{company.Logo.changingThisBreaksApplicationSecurity}}">
-        </div>
-    </ng-container>
-    <ng-template #placeholder>
-            no image
-    </ng-template>
+      <img style="width:100%;" src="https:{{company.Banner.changingThisBreaksApplicationSecurity}}">
+      <img style="max-width:150px;" src="https:{{company.Logo.changingThisBreaksApplicationSecurity}}">
+    </div>
+  </ng-container>
+  <ng-template #placeholder>
+    no image
+  </ng-template>
 
   <button md-button routerLink="add-review">Add Review</button>
 </div>
 
 
 <md-tab-group>
-    <md-tab label="Reviews">
-
-    </md-tab>
-    <md-tab label="Job Listings">
-
-    </md-tab>
+  <md-tab label="Reviews">
+    <div *ngFor="let listing of reviews$ | async">
+      {{listing | json}}
+    </div>
+  </md-tab>
+  <md-tab label="Job Listings">
+    <div *ngFor="let listing of (company$ | async)?.Classifieds">
+      {{listing | json}}
+    </div>
+  </md-tab>
 </md-tab-group>

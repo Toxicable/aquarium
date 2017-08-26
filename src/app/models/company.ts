@@ -2,7 +2,7 @@ export interface Company{
     Company: string;
     Logo: string;
     Banner: string;
-    Cassifieds: Cassified[]
+    Classifieds: Cassified[]
 }
 export interface Cassified{
     Title: string;

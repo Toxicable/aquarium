@@ -4,8 +4,10 @@ import { ReviewsService } from "../review/reviews.service";
 import { Observable } from "rxjs/Observable";
 import { ActivatedRoute } from '@angular/router';
 import { CompanyService } from "./company.service";
-import { Company } from "../models/company";
+import { Company, Cassified } from "../models/company";
 import { DomSanitizer } from '@angular/platform-browser';
+import { Review } from "../models/reviews";
+import { AngularFireDatabase } from "angularfire2/database";
 
 /**
  * Home landing page of the site.
@@ -23,13 +25,16 @@ export class CompanyComponent implements OnInit {
       private sanitiser: DomSanitizer,
       private route: ActivatedRoute,
       private companiesService: CompanyService,
+      private afDb: AngularFireDatabase
     ) {}
 
     company$: Observable<Company>;
+    listings$: Observable<Cassified[]>;
+    reviews$: Observable<Review[]>;
 
     ngOnInit(){
       const companyname$ = this.route.paramMap.map(params => params.get('companyName'))
-      companyname$.mergeMap(companyName => {
+      this.company$ = companyname$.mergeMap(companyName => {
         return this.companiesService.getAll()
           .map(companies =>{
             const company = companies.find(c => c.Company === companyName);
@@ -37,6 +42,19 @@ export class CompanyComponent implements OnInit {
             company.Logo = this.sanitiser.bypassSecurityTrustResourceUrl(company.Logo) as any;
             return company;
           })
+      })
+      // this.listings$ = companyname$.mergeMap( companyName => {
+      //   return this.companiesService.getAll().map(companies => {
+      //     const company =  companies.find(c => c.Company == companyName).Cassifieds
+      //   })
+      // })
+      this.reviews$ = companyname$.mergeMap( companyName => {
+        return this.companiesService.getAll().mergeMap(companies => {
+          return this.afDb.list('/reviews')
+            .map((reviews: Review[]) => {
+              return reviews.filter(r => r.companyName == companyName)
+            })
+        })
       })
 
 
