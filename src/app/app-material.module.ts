@@ -1,8 +1,12 @@
 import {MdInputModule} from '@angular/material';
 import {NgModule } from '@angular/core';
+import {MdSidenavModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
 
 const IMPORTS = [
-  MdInputModule
+  MdInputModule,
+  MdSidenavModule,
+  MdToolbarModule
 ]
 
 @NgModule({

@@ -18,6 +18,7 @@ import 'rxjs/add/operator/map';
 import 'hammerjs';
 import { AppMaterialModule } from "./app-material.module";
 import { AddReviewComponent } from "./review/add-review.component";
+import { AuthService } from "./auth.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { AddReviewComponent } from "./review/add-review.component";
     AngularFireDatabaseModule
   ],
   providers: [
-    ReviewsService
+    ReviewsService,
+    AuthService,
   ],
   bootstrap: [AppComponent]
 })
