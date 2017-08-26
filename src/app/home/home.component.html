@@ -3,7 +3,7 @@
 </md-input-container>
 
 <div fxLayout="row wrap">
-    <div *ngFor="let name of companyNames$ | async" [routerLink]="['company', name]" class="company-item pointer">
-        {{name}}
+    <div *ngFor="let name of companies$ | async" [routerLink]="['company', name]" class="company-item pointer">
+        {{name.Company}}
     </div>
 </div>

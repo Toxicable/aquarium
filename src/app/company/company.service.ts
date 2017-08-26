@@ -26,4 +26,39 @@ export class CompanyService{
             return company.filter(c => c.Company.includes(term)).slice(0, take)
         });
     }
+
+    searchCompanies(search: string){
+        let keyWords: string[] = search.split(" ");
+        let keyWord: string = "";
+
+        /*
+        let hits = {};
+        for(let i = 0; i < keyWords.length; i++) {
+            hits[keyWords[i]] = 0;
+        }*/
+
+        // count hits
+
+        /*
+        allCompanies.forEach(company => {
+            for(let i = 0; i < keyWords.length; i++){
+                if(company.indexOf(keyWords[i]) >= 0){
+                    
+                }
+            }
+            
+        })
+        */
+
+        return this.getAll().map(companies => {
+            return companies.filter(c => {
+                for(let i = 0; i < keyWords.length; i++){
+                    if(c.Company.includes(keyWords[i])){
+                        return true;
+                    }
+                }
+                return false;
+            });
+        });
+    }
 }
