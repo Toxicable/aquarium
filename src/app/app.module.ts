@@ -45,7 +45,7 @@ import { CompaniesComponent } from "./company/companies.component";
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [
+  providers: [ 
     ReviewsService,
     AuthService,
     CompanyService,
