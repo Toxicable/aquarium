@@ -12,28 +12,29 @@ export class ReviewsService {
         private afDb: AngularFireDatabase
     ) {
         this.reviews$ = Observable.of([
-            {   $key: '' ,
-                companyName: '' ,
-                location: '' , 
-                salary: 0 ,
+            {   $key: '21r324r2345' ,
+                companyName: 'Tradestaff Global' ,
+                location: 'auckland' , 
+                salary: 5 ,
                 allowances: '' , 
-                allowancesShort: '' ,
-                allowancesRating: 0 ,
+                allowancesShort: 'lots of days off' ,
+                allowancesRating: 5 ,
                 careerDev: '' ,
-                careerDevShort: '' ,
-                careerDevRating: 0 ,
+                careerDevShort: 'always room to improve' ,
+                careerDevRating: 5 ,
                 dressCode: '' ,
-                dressCodeShort: '' ,
-                dressCodeRating: 0 ,
+                dressCodeShort: 'shorts and shirts' ,
+                dressCodeRating: 5 ,
                 diversity: '' ,
-                diversityShort: '' ,
-                diversityRating: 0 ,
+                diversityShort: 'lots of diversity' ,
+                diversityRating: 5 ,
                 CompStruct: '' ,
-                CompStructShort: '' ,
-                CompStructRating: 0
+                CompStructShort: 'a great company structure' ,
+                CompStructRating: 5 ,
+                generalReview: ''
             } ,
             {   $key: '231412342143' ,
-                companyName: 'google' ,
+                companyName: 'Z Energy' ,
                 location: 'auckland' , 
                 salary: 4 ,
                 allowances: '' , 
@@ -50,10 +51,11 @@ export class ReviewsService {
                 diversityRating: 5 ,
                 CompStruct: '' ,
                 CompStructShort: 'very hierarchical' ,
-                CompStructRating: 1
+                CompStructRating: 1,
+                generalReview: ''
             } ,
             {   $key: '23141234232' ,
-                companyName: 'facebook' ,
+                companyName: 'Walling Contracting Ltd' ,
                 location: 'auckland' , 
                 salary: 3 ,
                 allowances: '' , 
@@ -70,10 +72,11 @@ export class ReviewsService {
                 diversityRating: 3 ,
                 CompStruct: '' ,
                 CompStructShort: 'realativly flat' ,
-                CompStructRating: 3
+                CompStructRating: 3 ,
+                generalReview: ''
             } ,
             {   $key: '813274318' ,
-                companyName: 'subway' ,
+                companyName: 'Nor West Contracting Ltd' ,
                 location: 'wellington' , 
                 salary: 2 ,
                 allowances: '' , 
@@ -90,7 +93,8 @@ export class ReviewsService {
                 diversityRating: 4 ,
                 CompStruct: '' ,
                 CompStructShort: 'high level of structure' ,
-                CompStructRating: 1
+                CompStructRating: 1,
+                generalReview: ''
         } ,
         ])
 
