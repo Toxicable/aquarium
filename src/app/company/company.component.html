@@ -17,13 +17,13 @@
   <md-tab label="Reviews">
     <div *ngFor="let review of reviews$ | async" class="review">
       <div class="review-location">Location : {{review.location}}</div>
-      <div class="review-stars">Allowance Rating : {{review.allowanceRating}}</div>
+      <div class="review-stars">Allowance Rating : {{review.allowancesRating}}</div>
       <div class="review-stars">Career Development Rating : {{review.careerDevRating}}</div>
-      <div class="review-stars">Company Structure Rating : {{review.compStructRating}}</div>
+      <div class="review-stars">Company Structure Rating : {{review.CompStructRating}}</div>
       <div class="review-stars">Diversity Rating : {{review.diversityRating}}</div>
       <div class="review-stars">Dresscode Rating : {{review.dressCodeRating}}</div>
       <div class="review-salary">Salary : {{review.salary}}</div>
-      <div class="review-content">Review : {{review.review}}</div>
+      <div class="review-content">Review : {{review.generalReview}}</div>
     </div>
 
     <div class="separator"></div>
