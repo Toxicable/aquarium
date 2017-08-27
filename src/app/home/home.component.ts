@@ -8,6 +8,7 @@ import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/startWith';
+
 /**
  * Home landing page of the site.
  * This will display the search bar, and the search results for companies.
