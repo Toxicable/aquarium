@@ -3,7 +3,7 @@
   width: 60%;
   padding: 20px;
   text-align: center;
-  margin-bottom: 0px !important; 
+  margin-bottom: 0px !important;
 }
 
 .image-cropper {
@@ -12,6 +12,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  display: inline-block;
 }
 
 .company-name{
