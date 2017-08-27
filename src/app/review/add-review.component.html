@@ -21,21 +21,25 @@
   <div>
     <label>Career Development Opportunities</label>
     <md-slider formControlName="careerDevRating" min="0" max="5" step="1"></md-slider>
+    {{form.get('careerDevRating').value}}
   </div>
 
   <div>
     <label>Dress code and requirements</label>
     <md-slider formControlName="dressCodeRating" min="0" max="5" step="1"></md-slider>
+    {{form.get('dressCodeRating').value}}
   </div>
 
   <div>
     <label>Company Diversity</label>
     <md-slider formControlName="diversityRating" min="0" max="5" step="1"></md-slider>
+    {{form.get('diversityRating').value}}
   </div>
 
   <div>
     <label>Company Structure</label>
     <md-slider formControlName="compStructRating" min="0" max="5" step="1"></md-slider>
+    {{form.get('compStructRating').value}}
   </div>
 
   <div>
