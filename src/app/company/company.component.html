@@ -13,7 +13,7 @@
 
 <md-tab-group>
   <md-tab label="Reviews">
-  <button md-raised-button routerLink="add-review" color="accent" >Add Review</button>
+  <button md-raised-button routerLink="add-review" color="primary" >Add Review</button>
     <div *ngFor="let review of reviews$ | async" class="review">
       <div class="review-location">Location : {{review.location}}</div>
       <div class="review-stars">Allowance Rating : {{review.allowancesRating}}</div>
