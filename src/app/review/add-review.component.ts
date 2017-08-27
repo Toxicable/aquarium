@@ -10,7 +10,7 @@ import { Company } from "../models/company";
 @Component({
   selector: 'app-reviews',
   templateUrl: 'add-review.component.html',
-  styles: []
+ // styleUrls: ['app-review.component.scss']
 })
 export class AddReviewComponent implements OnInit {
   form: FormGroup
@@ -44,15 +44,10 @@ export class AddReviewComponent implements OnInit {
         'salary': '',
         'location': '',
         'allowanceRating': '',
-        'allowance': '',
         'careerDevRating': '',
-        'careerDev': '',
         'dressCodeRating': '',
-        'dressCode': '',
         'diversityRating': '',
-        'diversity': '',
         'compStructRating': '',
-        'compStruct': '',
         'review': ''
       })
   }

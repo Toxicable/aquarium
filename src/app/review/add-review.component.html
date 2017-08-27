@@ -7,83 +7,42 @@
   </md-input-container>
 
   <md-select mdInput formControlName="salary" placeholder="salary(number)" name="dropdown">
-    <md-option *ngFor="let values of salaries" [value]="values.value">
+    <md-option *ngFor="let values of salaries" [value]="values.viewValue">
       {{values.viewValue}}
     </md-option>
   </md-select>
 
-  <table class="example-full-width" cellspacing="0">
-    <h2>Holidays and Sick days</h2>
-    <tr>
-      <td>
-        <md-slider formControlName="allowanceRating" min="0" max="5" step="1"></md-slider>
-        {{form.get('allowanceRating').value}}
-        <!--
-                <md-input-container class="example-full-width">
-                    <input mdInput  placeholder="rating (number)">
-                </md-input-container>
--->
-      </td>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="allowance" placeholder="short description">
-        </md-input-container>
-      </td>
-    </tr>
-    <h2>Career Development Opportunities</h2>
-    <tr>
-      <td>
-        <md-slider formControlName="careerDevRating" min="0" max="5" step="1"></md-slider>
+  <div>
+    <label>Holidays and Sick days</label>
+    <md-slider formControlName="allowanceRating" min="0" max="5" step="1"></md-slider>
+    {{form.get('allowanceRating').value}}
+  </div>
 
-      </td>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="careerDev" placeholder="short description">
-        </md-input-container>
-      </td>
-    </tr>
-    <h2>Dress code and requirements</h2>
-    <tr>
-      <td>
-        <md-slider formControlName="dressCodeRating" min="0" max="5" step="1"></md-slider>
+  <div>
+    <label>Career Development Opportunities</label>
+    <md-slider formControlName="careerDevRating" min="0" max="5" step="1"></md-slider>
+  </div>
 
-      </td>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="dressCode" placeholder="short description">
-        </md-input-container>
-      </td>
-    </tr>
-    <h2>Company Diversity</h2>
-    <tr>
-      <td>
-        <md-slider formControlName="diversityRating" min="0" max="5" step="1"></md-slider>
-      </td>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="diversity" placeholder="short description">
-        </md-input-container>
-      </td>
-    </tr>
-    <h2>Company Structure</h2>
-    <tr>
-      <td>
-        <md-slider formControlName="compStructRating" min="0" max="5" step="1"></md-slider>
-      </td>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="compStruct" placeholder="short description">
-        </md-input-container>
-      </td>
-    </tr>
-    <h2>Review</h2>
-    <tr>
-      <td>
-        <md-input-container class="example-full-width">
-          <input mdInput formControlName="review" placeholder="long description">
-        </md-input-container>
-      </td>
-    </tr>
-  </table>
+  <div>
+    <label>Dress code and requirements</label>
+    <md-slider formControlName="dressCodeRating" min="0" max="5" step="1"></md-slider>
+  </div>
+
+  <div>
+    <label>Company Diversity</label>
+    <md-slider formControlName="diversityRating" min="0" max="5" step="1"></md-slider>
+  </div>
+
+  <div>
+    <label>Company Structure</label>
+    <md-slider formControlName="compStructRating" min="0" max="5" step="1"></md-slider>
+  </div>
+
+  <div>
+    <md-input-container class="example-full-width">
+      <textarea mdInput formControlName="review" placeholder="Description"></textarea>
+    </md-input-container>
+  </div>
+
   <button md-raised-button (click)="submit()">Submit</button>
 </div>
