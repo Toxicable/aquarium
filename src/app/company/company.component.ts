@@ -22,7 +22,7 @@ import { AngularFireDatabase } from "angularfire2/database";
 })
 export class CompanyComponent implements OnInit {
     constructor(
-      private sanitiser: DomSanitizer,
+      public sanitiser: DomSanitizer,
       private route: ActivatedRoute,
       private companiesService: CompanyService,
       private afDb: AngularFireDatabase
@@ -36,18 +36,9 @@ export class CompanyComponent implements OnInit {
       const companyname$ = this.route.paramMap.map(params => params.get('companyName'))
       this.company$ = companyname$.mergeMap(companyName => {
         return this.companiesService.getAll()
-          .map(companies =>{
-            const company = companies.find(c => c.Company === companyName);
-            company.Banner = this.sanitiser.bypassSecurityTrustResourceUrl(company.Banner) as string;
-            company.Logo = this.sanitiser.bypassSecurityTrustResourceUrl(company.Logo) as string;
-            return company;
-          })
+          .map(companies =>companies.find(c => c.Company === companyName))
       })
-      // this.listings$ = companyname$.mergeMap( companyName => {
-      //   return this.companiesService.getAll().map(companies => {
-      //     const company =  companies.find(c => c.Company == companyName).Cassifieds
-      //   })
-      // })
+
       this.reviews$ = companyname$.mergeMap( companyName => {
         return this.companiesService.getAll().mergeMap(companies => {
           return this.afDb.list('/reviews')
@@ -56,10 +47,5 @@ export class CompanyComponent implements OnInit {
             })
         })
       })
-
-
-
     }
-
-
 }
