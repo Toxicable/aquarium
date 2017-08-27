@@ -6,7 +6,7 @@ import { ReviewsComponent } from './review/reviews.component';
 import { AddReviewComponent } from "./review/add-review.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { CompanyComponent } from "./company/company.component";
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent
