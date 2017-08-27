@@ -1,22 +1,26 @@
 <div class="top-spacing">
 </div>
 <div>
-  <span fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+  <span  fxFlex="100%" fxLayoutAlign="center">
       <md-input-container class="search-box">
       <input mdInput autocomplete="off" placeholder="Search Companies" [formControl]="searchControl">
       </md-input-container>
     </span>
 </div>
 <div class="search-spacing"></div>
-
 <div fxLayout="row wrap">
   <div *ngFor="let name of companies$ | async" [routerLink]="['company', name.Company]" class="card pointer company-card">
     <span fxFlex="20%">
       <div class="image-cropper" >
           <img *ngIf="name.Logo" [src]="name.Logo" />
       </div>
-
     </span>
     <h3>{{name.Company}}</h3>
   </div>
+  <img *ngIf="(companies$ | async)?.length === 0" src="assets/fishbox.jpeg" class="company-card" />
 </div>
+
+<span>
+
+</span>
+

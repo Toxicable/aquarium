@@ -5,7 +5,7 @@
     </div>
   </ng-container>
   <ng-template #placeholder>
-        no image
+    no image
   </ng-template>
 
 </div>
@@ -13,26 +13,26 @@
 
 <md-tab-group>
   <md-tab label="Reviews">
-  <button md-raised-button routerLink="add-review" color="primary" >Add Review</button>
-    <div *ngFor="let review of reviews$ | async" class="review">
-      <div class="review-location">Location : {{review.location}}</div>
-      <div class="review-stars">Allowance Rating : {{review.allowanceRating}}</div>
-      <div class="review-stars">Career Development Rating : {{review.careerDevRating}}</div>
-      <div class="review-stars">Company Structure Rating : {{review.compStructRating}}</div>
-      <div class="review-stars">Diversity Rating : {{review.diversityRating}}</div>
-      <div class="review-stars">Dresscode Rating : {{review.dressCodeRating}}</div>
-      <div class="review-salary">Salary : {{review.salary}}</div>
-      <div class="review-content">Review : {{review.review}}</div>
+    <button md-raised-button routerLink="add-review" color="primary">Add Review</button>
+    <div fxLayout="row wrap">
+      <div *ngFor="let review of reviews$ | async" class="review card" fxFlex="45%">
+        <div class="review-location">Location : {{review.location}}</div>
+        <div class="review-stars">Allowance Rating : {{review.allowanceRating}}</div>
+        <div class="review-stars">Career Development Rating : {{review.careerDevRating}}</div>
+        <div class="review-stars">Company Structure Rating : {{review.compStructRating}}</div>
+        <div class="review-stars">Diversity Rating : {{review.diversityRating}}</div>
+        <div class="review-stars">Dresscode Rating : {{review.dressCodeRating}}</div>
+        <div class="review-salary">Salary : {{review.salary}}</div>
+        <div class="review-content">Review : {{review.review}}</div>
+      </div>
     </div>
-
-    <div class="separator"></div>
   </md-tab>
   <md-tab label="Job Listings">
-    <div *ngFor="let listing of (company$ | async)?.Classifieds">
-      <a target="_blank" href="https://trademe.co.nz/{{listing.ListingId}}">
-        <div class="title">{{listing.Title}}</div>
+    <div fxLayout="row wrap">
+      <a *ngFor="let listing of (company$ | async)?.Classifieds" class="card" fxFlex="45%" target="_blank" [href]="'https://trademe.co.nz/' + listing.ListingId">
+        <h2>{{listing.Title}}</h2>
+        Apply At TRADEME
       </a>
-      <div class="separator"></div>
     </div>
   </md-tab>
 </md-tab-group>
