@@ -4,6 +4,7 @@ import { Company } from "../models/company";
 import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
+import 'rxjs/add/observable/of'
 @Injectable()
 export class CompanyService{
 
@@ -48,10 +49,10 @@ export class CompanyService{
         allCompanies.forEach(company => {
             for(let i = 0; i < keyWords.length; i++){
                 if(company.indexOf(keyWords[i]) >= 0){
-                    
+
                 }
             }
-            
+
         })
         */
 
