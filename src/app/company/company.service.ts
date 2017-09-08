@@ -34,30 +34,33 @@ export class CompanyService{
             return Observable.of([]);
         }
 
+        search = search.toLowerCase();
         let keyWords: string[] = search.split(" ");
         let keyWord: string = "";
 
-        /*
-        let hits = {};
-        for(let i = 0; i < keyWords.length; i++) {
-            hits[keyWords[i]] = 0;
-        }*/
+        let allCompanies = this.getAll();
 
-        // count hits
+        return allCompanies.map(companies => {
 
-        /*
-        allCompanies.forEach(company => {
-            for(let i = 0; i < keyWords.length; i++){
-                if(company.indexOf(keyWords[i]) >= 0){
+            type sortingCompany = Company & {hits: number};
 
+            companies.forEach((company: sortingCompany)  => {
+                company.hits = 0;
+                let companyName = company.Company.toLowerCase();
+                for(let i = 0; i < keyWords.length; i++){
+                    if(companyName.includes(keyWords[i])){
+                        company.hits ++;
+                    }
                 }
-            }
+            });
+            
+            return companies.filter((company: sortingCompany) => {
+                return company.hits > 0;
+            }).sort((a: sortingCompany, b: sortingCompany) => b.hits - a.hits);
 
-        })
-        */
+        });
 
-
-
+/*
         return this.getAll().map(companies => {
             return companies.filter(c => {
                 for(let i = 0; i < keyWords.length; i++){
@@ -68,5 +71,6 @@ export class CompanyService{
                 return false;
             }).slice(0,10);
         });
+        */
     }
 }
