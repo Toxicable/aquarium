@@ -5,6 +5,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build --prod --build-optimizer",
+    "build:prerender": "ng build --prod --build-optimizer && ng build --prod --app 1 --output-hashing=false && node prerender",
     "deploy": "npm run build && firebase deploy",
     "test": "ng test",
     "test:ci": "ng test --watch false"
@@ -12,22 +13,25 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.3.6",
-    "@angular/cdk": "^2.0.0-beta.8",
+    "@angular/cdk": "^2.0.0-beta.10",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
     "@angular/flex-layout": "^2.0.0-beta.9",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
-    "@angular/material": "^2.0.0-beta.8",
+    "@angular/material": "^2.0.0-beta.10",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/platform-server": "^4.4.0-RC.0",
     "@angular/router": "^4.2.4",
+    "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3",
     "angularfire2": "^4.0.0-rc.2",
     "core-js": "^2.4.1",
     "firebase": "^4.3.0",
     "hammerjs": "^2.0.8",
     "rxjs": "^5.4.2",
+    "webpack-bundle-analyzer": "^2.9.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -36,7 +40,6 @@
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
-    "typescript": "~2.3.3",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -44,6 +47,7 @@
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2"
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "typescript": "~2.3.3"
   }
 }

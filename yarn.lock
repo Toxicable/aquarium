@@ -16,7 +16,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cdk@^2.0.0-beta.8":
+"@angular/cdk@^2.0.0-beta.10":
   version "2.0.0-beta.10"
   resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-2.0.0-beta.10.tgz#7ffcc430d6f67dfde1df25e1fa693c188e4da08a"
   dependencies:
@@ -137,7 +137,7 @@
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-4.3.6.tgz#71cf2dbb4661568f3d12a9c0e4b9e043ef93bd3a"
 
-"@angular/material@^2.0.0-beta.8":
+"@angular/material@^2.0.0-beta.10":
   version "2.0.0-beta.10"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.10.tgz#23f5887d5e34da89dd6da1fe4da0b3f779da4807"
   dependencies:
@@ -154,6 +154,14 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.3.6.tgz#6152b1f3b78d0246fc5e150e2f7b9ed4337e3ba6"
   dependencies:
     tslib "^1.7.1"
+
+"@angular/platform-server@^4.4.0-RC.0":
+  version "4.4.0-RC.0"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-4.4.0-RC.0.tgz#0dc875d13c85130a81552269de11c19ab783cad3"
+  dependencies:
+    parse5 "^3.0.1"
+    tslib "^1.7.1"
+    xhr2 "^0.1.4"
 
 "@angular/router@^4.2.4":
   version "4.3.6"
@@ -179,11 +187,15 @@
     magic-string "^0.22.3"
     source-map "^0.5.6"
 
+"@nguniversal/module-map-ngfactory-loader@^1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-1.0.0-beta.3.tgz#50ab9e5f00e9815f2fa5a69dbfae5bda41b7bfa2"
+
 "@types/jasmine@2.5.45":
   version "2.5.45"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.45.tgz#58928a621d014ce6ab59c5a9c41071f7328b0ca9"
 
-"@types/node@~6.0.60":
+"@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.88"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.88.tgz#f618f11a944f6a18d92b5c472028728a3e3d4b66"
 
@@ -3675,6 +3687,12 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
+parse5@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.2.tgz#05eff57f0ef4577fb144a79f8b9a967a6cc44510"
+  dependencies:
+    "@types/node" "^6.0.46"
+
 parsejson@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/parsejson/-/parsejson-0.0.3.tgz#ab7e3759f209ece99437973f7d0f1f64ae0e64ab"
@@ -5443,6 +5461,10 @@ ws@1.1.2:
 wtf-8@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wtf-8/-/wtf-8-1.0.0.tgz#392d8ba2d0f1c34d1ee2d630f15d0efb68e1048a"
+
+xhr2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
 
 xml-char-classes@^1.0.0:
   version "1.0.0"
